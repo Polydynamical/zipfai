@@ -1,3 +1,5 @@
+str =
+"""
 TUSH
 NEVER
 TELL
@@ -25790,3 +25792,4 @@ WITH
 HEAVY
 HEART
 RELATE
+"""
