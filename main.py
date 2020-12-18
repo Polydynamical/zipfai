@@ -1,12 +1,19 @@
 from json import loads
 from collections import Counter
 import numpy as np
+import matplotlib.pylab as plt
 
 
 stuff = loads(open('othello.json').read())
 
 srt = dict(Counter(stuff))
-pandas.DataFrame(srt, index=['quantity']).plot(kind='bar')
+
+# pltt = sorted(srt.items())
+# print(pltt)
+# x, y =  zip(*pltt)
+# for j in pltt:
+# plt.plot(x, y)
+# plt.show()
 
 lst = dict(sorted(srt.items(), key=lambda item: item[1]))
 lst = list(lst.items())
