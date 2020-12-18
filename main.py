@@ -6,7 +6,7 @@ import numpy as np
 stuff = loads(open('othello.json').read())
 
 srt = dict(Counter(stuff))
-
+pandas.DataFrame(srt, index=['quantity']).plot(kind='bar')
 
 lst = dict(sorted(srt.items(), key=lambda item: item[1]))
 lst = list(lst.items())
@@ -26,7 +26,7 @@ last = last.split(')')[0]
 
 # srt = dict(sorted(srt.items(), key=lambda item: item[1]))
 for w in sorted(srt, key=srt.get, reverse=True):
-    print(w, srt[w], "               ", str(((int(srt[w])*100)/(int(last))))) # print word, number of occurences, and ratio compared to most used word
+    print(str( ( int(srt[w])*100 )/( int(last)) )[:5], r"%", w, srt[w], "               ") # print word, number of occurences, and ratio compared to most used word
 
 # print(lst[-1])
 # for words in str:
