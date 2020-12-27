@@ -8,7 +8,7 @@ Contains the words from various texts.
 #### Programs
 Contains the programs available to run in analyzing the data.
 
-### Extra
+### Extra  
 The following Regex command in vim will add a return after every word: ```%s/ \w\+/\r\0/g```  
 The following Regex command in vim will remove all leading whitespace: ```%s/^\s\+//g```  
-The following Regex command in vim will add double quotes to all word: ```%s/\w\+/"\0",/g```  
+The following Regex command in vim will add double quotes to all words: ```%s/\w\+/"\0",/g```  
