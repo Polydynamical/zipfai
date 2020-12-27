@@ -3,7 +3,7 @@
 from json import loads
 from collections import Counter
 
-file = 'data/' + input('Enter the name of the file in the "data" folder (i.e. Othello.json): ') # Set the path to the requested data file
+file = '../data/' + input('Enter the name of the file in the "data" folder (i.e. Othello.json): ') # Set the path to the requested data file
 dataDict = loads(open(file).read()) # Read the contents of the requested file
 
 srt = dict(Counter(dataDict)) # Count the occurences of each word in the file

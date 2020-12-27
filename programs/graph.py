@@ -8,7 +8,7 @@ from json import loads
 def getList(dict):
     return dict.values()
 
-file = 'data/' + input('Enter the name of the file in the "data" folder (i.e. Othello.json): ') # set path to requested data
+file = '../data/' + input('Enter the name of the file in the "data" folder (i.e. Othello.json): ') # set path to requested data
 dataDict = loads(open(file).read()) # read the contents of the data file
 
 srt = dict(Counter(dataDict)) # count number of occurences of words in file TODO: rewrite own counter
@@ -21,7 +21,7 @@ fig, ax = subplots() # initalize matplotlib
 # ax.set_yscale('log') # set to allow logarathmic graphs
 ax.plot(t, srt) # plot the values
 
-title = file.split(r'/')[1].split('.')[0] + ', Zipfaied' # set the title of the image
+title = file[8:].split('.')[0] + ', Zipfaied' # set the title of the image
 ax.set(xlabel='Word', ylabel='Occurences', title=title) # Label the axes and the title
 ax.grid() # add a grid to the graph
 
