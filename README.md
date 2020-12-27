@@ -10,3 +10,4 @@ Contains the programs available to run in analyzing the data.
 
 ### Extra
 The following Regex command in vim will add a return after every word: ```%s/ \w\+/\r\0/g```
+The following Regex command in vim will remove all leading whitespace: ```%s/^\s\+//g```
