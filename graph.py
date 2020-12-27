@@ -1,4 +1,4 @@
-# generate a graph based on occurences of words a file
+# generate a graph based on occurences of words from a json file
 
 from matplotlib.pyplot import subplots, show
 from numpy import arange, array
@@ -8,27 +8,21 @@ from json import loads
 def getList(dict):
     return dict.values()
 
-file = input('Enter the path to the file (i.e. data/Othello.json): ')
-stuff = loads(open(file).read())
+file = 'data/' + input('Enter the name of the file in the "data" folder (i.e. Othello.json): ') # set path to requested data
+dataDict = loads(open(file).read()) # read the contents of the data file
 
-srt = dict(Counter(stuff))
-srt = getList(srt)
-srt = [int(i) for i in srt]
-array(srt.sort(reverse=True))
+srt = dict(Counter(dataDict)) # count number of occurences of words in file TODO: rewrite own counter
+srt = getList(srt) # create a list with only the dict values
+srt = [int(i) for i in srt] # convert strings to ints
+array(srt.sort(reverse=True)) # sort array starting with highest value first
 
-# Data for plotting
-t = arange(len(srt))
-
-fig, ax = subplots()
+t = arange(len(srt)) # x values for word occurences
+fig, ax = subplots() # initalize matplotlib
 # ax.set_yscale('log') # set to allow logarathmic graphs
+ax.plot(t, srt) # plot the values
 
-ax.plot(t, srt)
+title = file.split(r'/')[1].split('.')[0] + ', Zipfaied' # set the title of the image
+ax.set(xlabel='Word', ylabel='Occurences', title=title) # Label the axes and the title
+ax.grid() # add a grid to the graph
 
-title = file.split(r'/')[1].split('.')[0]
-
-ax.set(xlabel='Word', ylabel='Occurences',
-        title='Othello, Zipfaied: ')
-ax.grid()
-
-fig.savefig("graph.png")
-show()
+show() # show the graph in a pop-up window

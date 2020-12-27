@@ -1,41 +1,16 @@
+# Provide detailed analysis of the words in the requested data
+
 from json import loads
 from collections import Counter
-import numpy as np
-import matplotlib.pylab as plt
 
-file = input('Enter the path to the file (i.e. data/Othello.json): ')
-stuff = loads(open(file).read())
+file = 'data/' + input('Enter the name of the file in the "data" folder (i.e. Othello.json): ') # Set the path to the requested data file
+dataDict = loads(open(file).read()) # Read the contents of the requested file
 
-srt = dict(Counter(stuff))
+srt = dict(Counter(dataDict)) # Count the occurences of each word in the file
 
-# pltt = sorted(srt.items())
-# print(pltt)
-# x, y =  zip(*pltt)
-# for j in pltt:
-# plt.plot(x, y)
-# plt.show()
+lst = dict(sorted(srt.items(), key=lambda item: item[1])) # Sort the dict based on the occurences of the word
+lst = list(lst.items()) # Convert the sorted dict to sorted tuples
+first = str(lst[-1]).split(', ')[1].split(')')[0] # get the number of times the most frequent word appears (used solely to calculate percentage of occurences of other words)
 
-lst = dict(sorted(srt.items(), key=lambda item: item[1]))
-lst = list(lst.items())
-last = str(lst[-1])
-last = last.split(', ')[1]
-last = last.split(')')[0]
-
-# print(srt)
-
-# data = list(srt.items())
-# arr = np.array(data)
-
-# arr = list(srt.values)
-
-# for key in srt:
-#     print("word: %s , occurences: %s" % (key, srt[key]))
-
-# srt = dict(sorted(srt.items(), key=lambda item: item[1]))
 for w in sorted(srt, key=srt.get, reverse=True):
-    print(str( ( int(srt[w])*100 )/( int(last)) )[:5], r"%", w, srt[w], "               ") # print word, number of occurences, and ratio compared to most used word
-
-
-# print(lst[-1])
-# for words in str:
-#   if word not in  
+    print(str( ( int(srt[w])*100 )/( int(first)) )[:5] + '%', w, srt[w], "               ") # print percentage or ratio compared to most frequent word, the word, and number of occurences
