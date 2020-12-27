@@ -3,8 +3,8 @@ from collections import Counter
 import numpy as np
 import matplotlib.pylab as plt
 
-
-stuff = loads(open('othello.json').read())
+file = input('Enter the path to the file (i.e. data/Othello.json): ')
+stuff = loads(open(file).read())
 
 srt = dict(Counter(stuff))
 
@@ -34,6 +34,7 @@ last = last.split(')')[0]
 # srt = dict(sorted(srt.items(), key=lambda item: item[1]))
 for w in sorted(srt, key=srt.get, reverse=True):
     print(str( ( int(srt[w])*100 )/( int(last)) )[:5], r"%", w, srt[w], "               ") # print word, number of occurences, and ratio compared to most used word
+
 
 # print(lst[-1])
 # for words in str:
