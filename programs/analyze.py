@@ -10,7 +10,7 @@ srt = dict(Counter(dataDict)) # Count the occurences of each word in the file
 
 lst = dict(sorted(srt.items(), key=lambda item: item[1])) # Sort the dict based on the occurences of the word
 lst = list(lst.items()) # Convert the sorted dict to sorted tuples
-first = str(lst[-1]).split(', ')[1].split(')')[0] # get the number of times the most frequent word appears (used solely to calculate percentage of occurences of other words)
+first = str(lst[-1]).split(', ')[1].split(')')[0] # get the number of times the most frequent word appears (used to calculate percentage below)
 
 for w in sorted(srt, key=srt.get, reverse=True):
-    print(str( ( int(srt[w])*100 )/( int(first)) )[:5] + '%', w, srt[w], "               ") # print percentage or ratio compared to most frequent word, the word, and number of occurences
+    print(str( ( int(srt[w])*100 )/( int(first)) )[:5] + '%', w, srt[w]) # print percentage or ratio compared to most frequent word, the word, and number of occurences
