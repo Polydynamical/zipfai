@@ -1,9 +1,11 @@
 # Provide detailed analysis of the words in the requested data
+from sys import path
+path.append("..")
 
 from json import loads
 from collections import Counter
 from os import listdir
-
+from tls.fns.dicts import merge_dicts
 
 count = '' # this variable sets the number of files to analyze
 
@@ -23,19 +25,6 @@ while count == '': # this loop is for obtaining the number of files to analyze
             count = ''
     except TypeError:
         count = ''
-
-def merge_dicts(*dicts): # function to merge two dicts but adding together the duplicates
-    d = {}
-    for dict in dicts:
-        for key in dict:
-            try:
-                d[key].append(dict[key])
-            except KeyError:
-                d[key] = [dict[key]]
-    for value in d:
-        d[value] = sum(d[value])
-    
-    return d
 
 fls = [] # empty arr to store which files need to be analyzed
 
