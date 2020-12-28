@@ -17,10 +17,10 @@ for x in range(count):
     exec(f'fl{x} = loads(open(fls[x]).read())') # Read the contents of the requested file(s)
     exec(f'dict{x} = dict(Counter(fl{x}))') # create dict(s) including the occurences of words from the requested file(s)
 
-if count == 1: # following four lines need to be rewritten - they merge the dicts with hammer and tongs rather than in a loop: TODO
-    srt = merge_dicts(dict0)
-elif count == 2:
-    srt = merge_dicts(dict0, dict1)
+    if count == 1: # following four lines need to be rewritten - they merge the dicts with hammer and tongs rather than in a loop: TODO
+        srt = merge_dicts(dict0)
+    elif count == 2:
+        srt = merge_dicts(dict0, dict1)
 
 lst = dict(sorted(srt.items(), key=lambda item: item[1])) # Sort the dict based on the occurences of the word
 lst = list(lst.items()) # Convert the sorted dict to sorted tuples
