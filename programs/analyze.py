@@ -1,6 +1,6 @@
 # Provide detailed analysis of the words in the requested data
 from sys import path
-path.append("..")
+path.append('..')
 
 from json import loads
 from collections import Counter
