@@ -15,3 +15,4 @@
 - Logarithmic 📁  
     - Contains the graphs from the current data in a logarithmic grpah.  
   
+
