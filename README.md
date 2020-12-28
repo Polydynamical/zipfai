@@ -3,15 +3,15 @@ Zipfai is an attempt to prove Zipf's Law and implement it to generate text using
 
 
 ### <ins> Navigaton </ins>
-#### Data
+#### Data 📁  
 Contains the words from various texts.  
 
-#### Programs
+#### Programs 📁  
 Contains the programs available to run in analyzing the data.
     - Analyze.py returns the words in the data organized by frequency. Also returns ratio compared to most used word and number of occurences.
     - Graph.py graphs the data compared to their frequency.
   
-#### Graphs  
+#### Graphs 📁  
 - Lin  
     - Contains the graphs from the current data in a linear graph.  
 - Log  
