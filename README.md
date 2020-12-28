@@ -13,9 +13,9 @@ Contains the programs available to run in analyzing the data.
   
 #### Graphs  
 ##### Lin  
-    - Contains the graphs from the current data in a linear graph.  
+- Contains the graphs from the current data in a linear graph.  
 ##### Log  
-    - Contains the graphs from the current data in a logarithmic grpah.  
+- Contains the graphs from the current data in a logarithmic grpah.  
   
 ### Extra   
 The following Regex command in vim will add a return after every word: ```%s/ \w\+/\r\0/g```  
