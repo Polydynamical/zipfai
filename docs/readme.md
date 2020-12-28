@@ -12,4 +12,9 @@ git clone https://github.com/cbracketdash/zipfai.git
 cd zipfai
 build.bat
 ```
-
+Mac/Linux:
+```
+git clone https://github.com/cbracketdash/zipfai.git
+cd zipfai
+sh build.sh
+```
