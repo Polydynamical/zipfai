@@ -4,27 +4,11 @@ path.append("..")
 
 from json import loads
 from collections import Counter
-from os import listdir
 from tls.fns.dicts import merge_dicts
+from tls.ipts.ct import gtFlCt
 
-count = '' # this variable sets the number of files to analyze
 
-fileCt = len(listdir('../data')) # get the number of data files in the data directory
-
-while count == '': # this loop is for obtaining the number of files to analyze
-    try:
-        count = int(input('Number of data files to analyze: '))
-        if count <= 0:
-            print('Goodbye!')
-            exit(0)
-    except ValueError:
-        count = ''
-    try:
-        if count > fileCt:
-            print('Error: Too many files')
-            count = ''
-    except TypeError:
-        count = ''
+count = gtFlCt()
 
 fls = [] # empty arr to store which files need to be analyzed
 
