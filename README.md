@@ -12,9 +12,9 @@ Zipfai is an attempt to prove Zipf's Law and implement it to generate text using
     - Graph.py graphs the data compared to their frequency.
   
 #### Graphs 📁  
-- Lin 📁  
+- Linear 📁  
     - Contains the graphs from the current data in a linear graph.  
-- Log 📁  
+- Logarithmic 📁  
     - Contains the graphs from the current data in a logarithmic grpah.  
   
 ### Extra   
