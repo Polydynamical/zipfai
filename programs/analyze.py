@@ -9,6 +9,8 @@ from tls.ipts.ct import gtFlCt
 
 
 count = gtFlCt()
+if count == 0:
+    exit(0)
 
 fls = [] # empty arr to store which files need to be analyzed
 
