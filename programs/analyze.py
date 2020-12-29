@@ -22,6 +22,8 @@ try:
         srt = merge_dicts(dict0)
     elif count == 2:
         srt = merge_dicts(dict0, dict1)
+    elif count == 3:
+        srt = merge_dicts(dict0, dict1, dict2)
 except:
     print('This error should never occur')
     exit(0)
