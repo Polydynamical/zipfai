@@ -24,7 +24,7 @@ try:
         srt = merge_dicts(dict0, dict1)
 except:
     print('This error should never occur')
-
+    exit(0)
 
 lst = dict(sorted(srt.items(), key=lambda item: item[1])) # Sort the dict based on the occurences of the word
 lst = list(lst.items()) # Convert the sorted dict to sorted tuples
