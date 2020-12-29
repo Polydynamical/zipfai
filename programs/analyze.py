@@ -26,5 +26,5 @@ lst = dict(sorted(srt.items(), key=lambda item: item[1])) # Sort the dict based 
 lst = list(lst.items()) # Convert the sorted dict to sorted tuples
 first = str(lst[-1]).split(', ')[1].split(')')[0] # get the number of times the most frequent word appears (used to calculate percentage below)
 
-for w in sorted(srt, key=srt.get, reverse=True):
+for w in sorted(srt, key=srt.get, reverse=False):
     print(str( ( int(srt[w])*100 )/( int(first)) )[:5] + '%', w, srt[w]) # print percentage or ratio compared to most frequent word, the word, and number of occurences
