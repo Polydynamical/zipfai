@@ -10,3 +10,6 @@ def merge_dicts(*dicts): # function to merge two dicts but adding together the d
         d[value] = sum(d[value])
     
     return d
+
+def getValues(dict):
+    return dict.values()

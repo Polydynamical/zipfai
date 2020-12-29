@@ -18,3 +18,4 @@ def gtFlCt():
         except TypeError:
             count = ''
     return count
+
