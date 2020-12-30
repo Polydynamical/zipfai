@@ -4,8 +4,6 @@ path.append('..')
 
 from matplotlib.pyplot import subplots, show
 from numpy import arange, array
-from collections import Counter
-from json import loads
 from tls.fns.dicts import getValues
 from tls.fns.zip import zipfaiData
 path.remove('..')
