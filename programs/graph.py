@@ -15,11 +15,12 @@ files = srt[1]
 srt = srt[0]
 
 def get_title():
+    a = ''
     for file in files:
         file = file[8:].split('.')[0]
-        title = ''.join(file)
-    title = title.join(', Zipfaied')
-    return title
+        a = a + file + ', '
+    a += '-- Zipfaied'
+    return a
 
 srt = getValues(srt) # create a list with only the dict values
 srt = [int(i) for i in srt] # convert strings to ints
