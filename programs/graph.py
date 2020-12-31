@@ -4,8 +4,8 @@ path.append('..')
 
 from matplotlib.pyplot import subplots, show
 from numpy import arange, array
-from tls.fns.dicts import getValues
-from tls.fns.zip import zipfaiData
+from toools.fns.dicts import getValues
+from toools.fns.zip import zipfaiData
 path.remove('..')
 
 srt = zipfaiData()

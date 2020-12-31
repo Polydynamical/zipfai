@@ -3,8 +3,8 @@ def zipfaiData():
     path.append('..')
 
     from json import loads
-    from tls.ipts.ct import gtFlCt
-    from tls.fns.dicts import merge_dicts
+    from toools.ipts.ct import gtFlCt
+    from toools.fns.dicts import merge_dicts
     path.remove('..')
     from collections import Counter
 
