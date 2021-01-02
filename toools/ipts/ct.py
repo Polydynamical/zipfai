@@ -5,7 +5,13 @@ def gtFlCt():
 
     while count == '': # this loop is for obtaining the number of files to analyze
         try:
-            count = int(input('Number of data files to analyze: '))
+            count = input('Number of data files to analyze: ')
+            if count == 'a':
+                count = fileCt
+
+                break
+            else:
+                count = int(count)
             if count <= 0:
                 print('Goodbye!')
                 exit(0)
