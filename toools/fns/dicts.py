@@ -1,4 +1,4 @@
-def merge_dicts(*dicts): # function to merge two dicts but adding together the duplicates
+def merge_dicts(*dicts: dict) -> dict: # function to merge two dicts but adding together the duplicates
     d = {}
     for dict in dicts:
         for key in dict:
@@ -11,5 +11,5 @@ def merge_dicts(*dicts): # function to merge two dicts but adding together the d
     
     return d
 
-def getValues(dict):
+def getValues(dict: dict) -> list:
     return dict.values()
