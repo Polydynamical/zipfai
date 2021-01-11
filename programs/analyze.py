@@ -1,7 +1,7 @@
 # Provide detailed analysis of the words in the requested data
 from sys import path
 path.append('..')
-from toools.fns.zip import zipfaiData
+from tls.fns.zip import zipfaiData
 path.remove('..')
 
 srt = zipfaiData()[0]
