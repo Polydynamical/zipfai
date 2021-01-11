@@ -21,7 +21,7 @@ def zipfaiData():
             fl.append(loads(open(fls[b]).read()))
             b += 1
     else:
-        for x in range(int(count)):
+        for x in range(int(fileCt)):
             fls.append('../data/' + input('Enter the name of the file in the "data" folder (i.e. Othello.json): ')) # append the file names into an array
             fl.append(loads(open(fls[x]).read())) # append the contents of the jsons into a list
     fl = sum(fl, []) # combine the nested lists into a single list
