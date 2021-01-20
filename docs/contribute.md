@@ -7,4 +7,4 @@ All pull requests are welcome and should be reviewed within 72 hours. More data 
 - Add double quotes to all words: ```%s/\w\+/"\0",/g```  
 - Make all words uppercase: ```%s/\w\+/\U\0/g```  
 - Remove all occurences of '\\': ```%s/\\\+//g```  
-- Replace ```",'"``` with ```'```: ```%s/",'"/'/g  
+- Replace ```",'"``` with ```'```: ```%s/",'"/'/g```
