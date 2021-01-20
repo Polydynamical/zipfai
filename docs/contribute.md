@@ -10,5 +10,9 @@ All pull requests are welcome and should be reviewed within 72 hours. More data 
 - Replace ```",'"``` with ```'```: ```%s/",'"\+/'/g```
 - Replace ```Â€"``` with a space ```%s/Â€?\+//c```  
 - Replace ```+``` with a space ```%s/+\+/ /g```
-- replace ```Ã©``` (é) with ```E``` ```%s/Ã©\+/E/g```
+- Replace ```Ã©``` (é) with ```E``` ```%s/Ã©\+/E/g```
 - Remove all occurences of ```*```: ```%s/*\+//g```
+- Replace ```Ä«``` (ī) with ```i```: ```%s/Ä«\+//g```
+- Remove all double quotes: ```%s/"\+//g```
+- Replace all single quotes preceded by a space with a space: ```%s/ '\+/ /g```
+- Replace all single quotes at the end of a line: ```%s/'\r\+//g```
