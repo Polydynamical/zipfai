@@ -16,4 +16,4 @@ All pull requests are welcome and should be reviewed within 72 hours. More data 
 - Remove all double quotes: ```%s/"\+//g```
 - Replace all single quotes preceded by a space with a space: ```%s/ '\+/ /g```
 - Replace all single quotes at the end of a line: ```%s/'\r\+//g```
-- Remove all non-ASCII characters: ```%s/[^\x00-\x7F]\+//c```  
+- Remove all non-ASCII characters: ```%s/[^\x00-\x7F]\+//g```  
