@@ -6,6 +6,7 @@ from matplotlib.pyplot import subplots, show
 from numpy import arange, array
 from tls.fns.dicts import getValues
 from tls.fns.zip import zipfaiData
+from math import log
 path.remove('..')
 
 srt = zipfaiData()
@@ -23,8 +24,15 @@ def get_title():
 srt = getValues(srt) # create a list with only the dict values
 srt = [int(i) for i in srt] # convert strings to ints
 array(srt.sort(reverse=True)) # sort array starting with highest value first
+print(len(srt))
+srt = srt[:150]
 
-t = arange(len(srt)) # x values for word occurences
+t = arange(1, len(srt) + 1) # x values for word occurences
+for num in t:
+    num = log(num)
+for val in srt:
+    val = log(val)
+
 fig, ax = subplots() # initalize matplotlib
 # ax.set_yscale('log') # set to allow logarathmic graphs
 ax.plot(t, srt) # plot the values
